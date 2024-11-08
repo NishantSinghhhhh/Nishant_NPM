@@ -1,18 +1,18 @@
 {
-  "name": "anmol",
+  "name": "nishant-card",
   "version": "4.0.0",
-  "description": "A personal card for Anmol Pratap Singh (@anmol098)",
+  "description": "A personal card for Nishant",
   "main": "card.js",
   "bin": {
-    "anmol": "./card.js"
+    "nishant": "./card.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anmol098/npx_card.git"
+    "url": "git+https://github.com/NishantSinghhhhh/Nishant_NPM.git" 
   },
   "scripts": {
     "test": "node card.js",
-    "pub": "npm version major & npm publish"
+    "pub": "npm version major && npm publish"
   },
   "dependencies": {
     "boxen": "^4.2.0",
@@ -32,6 +32,6 @@
     "npx card",
     "business card"
   ],
-  "author": "Anmol Singh <hi@anmolsingh.me> (https://anmolsingh.me/)",
+  "author": "Nishant <prashantnishant80@gmail.com> (https://example.com)", 
   "license": "ISC"
 }
