@@ -3,7 +3,7 @@ This my NPX card unique style to connect with me directly via console or termina
 
 👇 just hit 
 ```bash
-npx nishant
+npx nishant-card
 ```
 And get to know me in unique style.
 
@@ -13,7 +13,7 @@ And get to know me in unique style.
 
 The final output might look something like this:
 
-![image](https://github.com/NishantSinghhhh/Nishant_NPM/main/demo.gif)
+![Demo](https://github.com/NishantSinghhhh/Nishant_NPM/blob/main/demo.gif)
 
 
 <hr/>
