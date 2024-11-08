@@ -25,31 +25,37 @@ const questions = [
             {
                 name: `Send me an ${chalk.green.bold("email")}?`,
                 value: () => {
-                    open("mailto:hi@anmolsingh.me");
+                    open("mailto:nishant.1703.developer@gmail.com");
                     console.log("\nDone, see you soon at inbox.\n");
                 }
             },
             {
                 name: `Download my ${chalk.magentaBright.bold("Resume")}?`,
                 value: () => {
-                    // cliSpinners.dots;
+                    // Initialize the loader
                     const loader = ora({
-                        text: ' Downloading Resume',
+                        text: 'Opening Google Drive link to resume',
                         spinner: cliSpinners.material,
                     }).start();
-                    let pipe = request('https://anmolsingh.me/api/resume').pipe(fs.createWriteStream('./anmol-resume.html'));
-                    pipe.on("finish", function () {
-                        let downloadPath = path.join(process.cwd(), 'anmol-resume.html')
-                        console.log(`\nResume Downloaded at ${downloadPath} \n`);
-                        open(downloadPath)
-                        loader.stop();
-                    });
+            
+                    const googleDriveLink = "https://drive.google.com/file/d/1uxxFb2LaKIU-Fx1B35idijiss6UJsRkR/view"; // Replace with your actual Google Drive link
+            
+                    // Open the Google Drive link directly in the browser
+                    open(googleDriveLink)
+                      .then(() => {
+                            loader.stop();
+                            console.log(`\nResume opened successfully in your browser at ${chalk.blue(googleDriveLink)}\n`);
+                        })
+                        .catch((error) => {
+                            loader.stop();
+                            console.error("Error opening Google Drive link:", error);
+                        });
                 }
             },
             {
                 name: `Schedule a ${chalk.redBright.bold("Meeting")}?`,
                 value: () => {
-                    open('https://calendly.com/anmol098/30min');
+                    open('https://calendly.com/prashantnishant80/30min');
                     console.log("\n See you at the meeting \n");
                 }
             },
@@ -64,16 +70,12 @@ const questions = [
 ];
 
 const data = {
-    name: chalk.bold.green("             Anmol Pratap Singh"),
-    handle: chalk.white("@anmol098"),
-    work: `${chalk.white("Lead Software Engineer at")} ${chalk
-        .hex("#2b82b2")
-        .bold("FootLoose Labs")}`,
-    twitter: chalk.gray("https://twitter.com/") + chalk.cyan("misteranmol"),
-    github: chalk.gray("https://github.com/") + chalk.green("anmol098"),
-    linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blue("anmol098"),
-    web: chalk.cyan("https://anmolsingh.me"),
-    npx: chalk.red("npx") + " " + chalk.white("anmol"),
+    name: chalk.bold.green("Nishant Singh"),
+    twitter: chalk.gray("https://x.com/") + chalk.cyan("Nishant37315718"),
+    github: chalk.gray("https://github.com/") + chalk.green("NishantSinghhhhhh"),
+    linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blue("nishant-singh-8a5a00282/"),
+    web: chalk.cyan("https://portfolio-01-rust.vercel.app/"),
+    npx: chalk.red("npx") + " " + chalk.white("nishant"),
 
     labelWork: chalk.white.bold("       Work:"),
     labelTwitter: chalk.white.bold("    Twitter:"),
@@ -86,9 +88,6 @@ const data = {
 const me = boxen(
     [
         `${data.name}`,
-        ``,
-        `${data.labelWork}  ${data.work}`,
-        ``,
         `${data.labelTwitter}  ${data.twitter}`,
         `${data.labelGitHub}  ${data.github}`,
         `${data.labelLinkedIn}  ${data.linkedin}`,
