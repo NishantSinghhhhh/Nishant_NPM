@@ -13,7 +13,7 @@ And get to know me in unique style.
 
 The final output might look something like this:
 
-![image](https://github.com/NishantSinghhhh/Nishant_NPM/blob/main/demo.gif)
+![image](https://github.com/NishantSinghhhh/Nishant_NPM/main/demo.gif)
 
 
 <hr/>
